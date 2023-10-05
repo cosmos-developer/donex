@@ -17,45 +17,29 @@ Extension for interacting mainly with end users. It will include the following f
 * directly from imported wallet
 * fiat on - ramp (advanced)
 3. donate:
-* detect address [database](#database)
+* detect address [contract](#smart-contract)
 * select donation tiers (1, 5, 10, custom) (default 5)
 * select accepted denomination (USDT, USDC, ...) )(default USDT)
 * transfer funds [contract](#smart-contract)
 
 **Notes**: how to shorten logic 2, 3 in donate feature group so that user can just 1 - click (fallback on default options, shift responsibility of listing donation tiers to creators, ...)
 ### Smart contract
+1. 1 chain
+	* submit link between social platform accounts and chain address
+	* query by social platform link (ưu tiên)
+	* query by contract address
+	* accounting (số tiền, người nhận, platform nhận)
+		* emit event (địa chỉ người donate, timestamp, số tiền, người nhận, platform nhận) (nếu khả thi thì thêm social platform account của người gửi)
+2. Database
+* map<Pair<string, string>, string> (map<Pair<social platform, profile id>, account address>)
+* map<string, Pair<string, string>> (map<Pair<social platform, profile id>, account address>)
 
-
+3. multi - chain design (advanced)
 ### Worker
-
-### Registration site
-
-### Analytics Dashboard (Advanced)
-Cần làm Dashboard thống kê 
-+ Thiết kế Database: 
-	* User: Gồm thông tin tài khoản và mạng xã hội đã liên kết. 
-	* Transaction: Mỗi lần donate sẽ có 1 transaction sinh ra, trong đó có người gửi người nhận số tiền và số tiền thực nhận, thông qua mạng xã hội nào 
-	* Bảng xếp hạng, gồm user Id và số tiền donate, số tiền được donate và xếp hạng donate, xếp hạng được donate theo tuần, tháng và từ trước tới nay 
-	* DonationInfo: Thông tin tổng kết donate và được donate của từng người dùng, theo tuần, tháng và từ trước tới nay 
-+ 1 worker để làm việc nhận event và lưu các giao điện vào dữ liệu:
-	* Task nhận event và sau đó lưu vào transaction 
-	* Task từ transaction sẽ cập nhật lại xếp hạng của các user có liên quan trong DB 
-+ 1 Server có API để lấy thông tin ra 
-	* API đăng kí, liên kết tài khoản mạng xã hội và liên kết ví 
-	* API đăng nhập, đăng xuất 
-	* API donate (Ẩn danh hoặc không, có thể kèm theo tin nhắn hoặc không) 
-	* API lấy thông tin bản thân (số tài khoản, thông tin các mạng xã hội đã liên kết, số dư, số tiền đã donate và được donate) 
-	* API lấy tỉ lệ đóng góp được donate và đi donate của từng mạng xã hội 
-	* API lấy thông tin dashboard top những người được donate hoặc những người đi donate ( có filter theo mạng xã hội, theo mức tuần hoặc tháng hoặc từ trước tới nay) 
-	* API lấy thống kê mức độ được donate của bản thân theo từng 7 ngày/ 30 ngày/ 1 năm/ từ trước tới nay 
-	* API lấy thống kê mức độ đã donate của bản thân theo từng 7 ngày/ 30 ngày/ 1 năm/ từ trước tới nay 
-	* API lấy top những người donate cho bản thân nhiều nhất và số tiền 
-	* API lấy top những người được bản thân donate nhiều nhất và số tiền + 1 Frontend để hiển thị các dashboard 
-	* Thông tin số tài khoản và số dư, và số tiền đã nhận donate và đã donate 
-	* Tỉ lệ đóng góp vào khoản được donate ở từng mạng xã hội/ tỉ lệ trên số tiền đã donate ở từng mạng xã hội của bản thân 
-	* Top những người kiếm được nhiều tiền donate nhất/ đi donate nhiều nhất toàn server và thứ hạng bản thân 
-	* Thống kê mức độ được donate của bản thân trong 7 ngày/ 30 ngày/ 1 năm/ từ trước tới nay 
-	* Thông kê mức độ đã donate của bản thân trong 7 ngày/ 30 ngày/ 1 năm/ từ trước tới nay 
-	* Top những người donate cho bản thân nhiều nhất và số tiền 
-	* Top những người được bản thân donate nhiều nhất và số tiền
+query blocks from chain per every 5s [contract](#smart-contract)
 ### Database
+* event (địa chỉ người donate, timestamp, số tiền, người nhận, platform nhận) [contract](#smart-contract)
+### Registration site
+* register social platforms với wallet [contract](#smart-contract)
+### Analytics Dashboard (Advanced)
+* Donation in 1 month, from which social platform

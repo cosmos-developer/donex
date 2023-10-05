@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "14c2055c738a10cc",
+    "id": "e51e09da74c30a93",
     "type": "split",
     "children": [
       {
-        "id": "9e11aa79295d9016",
+        "id": "d2eaa9ca4b526f15",
         "type": "tabs",
         "children": [
           {
-            "id": "3002f5cc5efddad8",
+            "id": "008ba8931e9007f5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "documents/DonEx Architecture.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a2d6f33438956e87",
+    "id": "7cfcfb6bb6691d65",
     "type": "split",
     "children": [
       {
-        "id": "11ef360470ced186",
+        "id": "d77b4ef387680819",
         "type": "tabs",
         "children": [
           {
-            "id": "395e69c02044e275",
+            "id": "ef88c2eb9ea3febf",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "6843202c02fc0638",
+            "id": "d737f7e3acab673d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "025bcac32a8ca9b7",
+            "id": "ea1c44f8fd15149d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,20 +72,21 @@
     "width": 300
   },
   "right": {
-    "id": "28431fbb866a48ec",
+    "id": "0d0272965547e202",
     "type": "split",
     "children": [
       {
-        "id": "57e139199d837049",
+        "id": "9c1ee52cef7ce839",
         "type": "tabs",
         "children": [
           {
-            "id": "90d3fdde80a5d4e8",
+            "id": "f4a835ad37cfc844",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "collapseAll": true,
+                "file": "documents/DonEx Architecture.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "2e7d72dee5bacd4a",
+            "id": "21e5408bf3c94a65",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "documents/DonEx Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "a3dedf6cd999f58a",
+            "id": "1177b08d8cc29bd7",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,19 +120,21 @@
             }
           },
           {
-            "id": "bb0c3bbf305d28c4",
+            "id": "8665249abf70463f",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "documents/DonEx Architecture.md"
+              }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,11 +146,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "395e69c02044e275",
-  "lastOpenFiles": [
-    "DonEx Architecture.md",
-    "donex.drawio.png",
-    "donex.drawio",
-    "Ý tưởng hackathon.md"
-  ]
+  "active": "008ba8931e9007f5",
+  "lastOpenFiles": []
 }
