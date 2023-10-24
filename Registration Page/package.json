@@ -1,0 +1,43 @@
+{
+  "name": "don-ex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.1",
+    "@cosmjs/amino": "^0.31.1",
+    "@cosmjs/cosmwasm-stargate": "^0.31.1",
+    "@cosmjs/math": "^0.31.1",
+    "@cosmjs/proto-signing": "^0.31.1",
+    "@cosmjs/stargate": "^0.31.1",
+    "@cosmos-kit/core": "^2.7.0",
+    "@cosmos-kit/cosmostation": "^2.4.0",
+    "@cosmos-kit/keplr": "^2.4.0",
+    "@cosmos-kit/leap": "^2.4.0",
+    "@cosmos-kit/react": "^2.9.0",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "chain-registry": "^1.20.0",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
+    "qrcode.react": "^3.1.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}
